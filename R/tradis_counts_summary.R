@@ -3,6 +3,8 @@
 
 tradis_counts_summary <- function(input_df, cond_name, num_reps) {
 
+  require(dplyr)
+
   cond_name <- enquo(cond_name)
 
   output_df <- input_df %>%
