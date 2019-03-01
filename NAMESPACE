@@ -1,3 +1,4 @@
+export(gumbel_counts_summary)
 export(gumbel_rename_columns)
-export(tradis_count_summary)
+export(tradis_counts_summary)
 export(tradis_rename_columns)
