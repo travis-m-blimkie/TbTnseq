@@ -6,7 +6,7 @@ tradis_counts_summary <- function(input_df, cond_name, num_reps) {
 
   output_df <- input_df %>%
     mutate(., sum_counts = rowSums(select_if(.tbl = ., .predicate = is.numeric) == 0)) %>%
-    mutate(., !!cond_name := case_when(sum_counts >= (num_reps - 1) ~ "ess",
+    mutate(., !!cond_name := case_when(sum_counts >= num_reps ~ "ess",
                                        TRUE ~ "non")) %>%
     select(., locus_tag, !!cond_name)
 
