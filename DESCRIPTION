@@ -1,6 +1,6 @@
 Package: TbTnseq
 Title: TnSeq pipeline functions by TB
-Version: 0.1.2
+Version: 0.1.4
 Authors@R: person("Travis", "Blimkie", email = "travis.m.blimkie@gmail.com", role = c("aut", "cre"))
 Description: Functions for an analysis pipeline of TnSeq results
 Depends: R (>= 3.5.0)
