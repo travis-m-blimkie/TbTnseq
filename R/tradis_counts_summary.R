@@ -1,6 +1,9 @@
+
 # Tradis function to get summary of counts and filter ---------------------
 
 tradis_counts_summary <- function(input_df, cond_name, num_reps) {
+
+  require(dplyr)
 
   cond_name <- enquo(cond_name)
 

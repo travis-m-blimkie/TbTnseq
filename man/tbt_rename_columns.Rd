@@ -31,6 +31,9 @@ tbt_rename_columns(input_list, cond_name)
   None.
 }
 
+\seealso{
+  \url{https://www.github.com/travis-m-blimkie/TbTnseq}
+}
 
 \examples{
 

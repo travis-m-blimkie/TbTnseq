@@ -3,6 +3,8 @@
 
 gumbel_counts_summary <- function(input_df, cond_name, num_reps) {
 
+  require(dplyr)
+
   cond_name <- enquo(cond_name)
 
   sum_count_df <- input_df %>%
