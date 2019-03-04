@@ -1,6 +1,9 @@
 
 # Gumbel count summary function -------------------------------------------
 
+#' Determine essentiality for Gumbel results. Genes are considered essential
+#' if they have an E in all replicates.
+
 gumbel_counts_summary <- function(input_df, cond_name, num_reps) {
 
   require(dplyr)

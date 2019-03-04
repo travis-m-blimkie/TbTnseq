@@ -1,6 +1,7 @@
 
 # TbTnseq column renaming function ----------------------------------------
 
+#' Function which renames columns to be unique for that condition and replicate
 
 tbt_rename_columns <- function(input_list, cond_name) {
 
