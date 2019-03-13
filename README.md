@@ -8,3 +8,4 @@ Current WIP.
 
 ### Functions
 - **tbt_rename** - renames count or call column to be unique for each condition and replicate
+- **tbt_readFiles** - read in files for Gumbel or Tradis TnSeq results
