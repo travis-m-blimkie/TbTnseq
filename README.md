@@ -7,6 +7,6 @@ Designed for use with TnSeq results for Tradis and Transit (Gumbel).
 Current WIP. 
 
 ### Functions
-- **gumbel_counts_summary** - define essential genes based on E call in all replicates
-- **tradis_counts_summary** - define essential genes based on 0 counts in all replicates
-- **tbt_rename_columns** - renames count or call column to be unique for each condition and replicate
+- **tbt_rename** - renames count or call column to be unique for each condition and replicate
+- **tbt_readFiles** - read in files for Gumbel or Tradis TnSeq results
+- **tbt_essential** - determine essentiality for Gumbel or Tradis results based on specified stringency
