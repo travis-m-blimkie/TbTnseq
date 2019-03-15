@@ -24,6 +24,14 @@ tbt_rename(input_list, cond_name)
     count column name, along with replicate number.}
 }
 
+\details{
+Function renames the count or call column based on combining the condition and
+replicate, and appending this to the count/call column. Once this step is
+complete, data frames for each condition can be joined with
+\code{plyr::join_all()}, producing a single data frame for each condition
+containing the appropriate information for each replicate.
+}
+
 \value{
   \item{tbt_rename}{  A list of data frames, with the count colums named to be
   unique to the condition and replicate.}
