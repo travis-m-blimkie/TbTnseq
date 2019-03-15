@@ -1,6 +1,6 @@
-\name{tbt_rename_columns}
+\name{tbt_rename}
 
-\alias{tbt_rename_columns}
+\alias{tbt_rename}
 
 \title{
   Renames TnSeq result count columns
@@ -12,7 +12,7 @@
 }
 
 \usage{
-tbt_rename_columns(input_list, cond_name)
+tbt_rename(input_list, cond_name)
 }
 
 \arguments{
@@ -23,7 +23,7 @@ tbt_rename_columns(input_list, cond_name)
 }
 
 \value{
-  \item{tbt_rename_columns}{   A list of data frames, with the count colums
+  \item{tbt_rename}{   A list of data frames, with the count colums
     named to be unique the condition and replicate.}
 }
 
