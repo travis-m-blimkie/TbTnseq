@@ -25,6 +25,13 @@ tbt_readFiles(tool, conditions, reps, data_folder)
         and all its replicates. Should NOT end with "/".}
 }
 
+\details{
+Designed as the first step in a pipeline to determine essential genes from
+Tradis or Transit/Gumbel. After this step, count or call column (depending on
+the tool) should be renamed to be unique to each condition/replicate. This can
+be done using \code{tbt_rename()}.
+}
+
 \value{
   \item{tbt_readFiles}{   A list of the conditions, holding a list of the
   replicates for that condition, with the data stored in a data frame. I.e.
