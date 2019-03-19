@@ -3,7 +3,7 @@
 \alias{tbt_rename}
 
 \title{
-  Renames TnSeq count/call column
+  Rename TnSeq Columns
 }
 
 \description{

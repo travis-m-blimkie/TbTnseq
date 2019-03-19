@@ -3,12 +3,12 @@
 \alias{tbt_readFiles}
 
 \title{
-  Read files from TnSeq programs
+  Read Files from TnSeq Programs
 }
 
 \description{
-  Read the file produced by Tradis or Transit/Gumbel TnSeq pipelines. Also
-  selects the gene name and call or count columns for subsequent use.
+Read the file produced by Tradis or Transit/Gumbel TnSeq pipelines and selects
+the gene name and call or count columns for subsequent use.
 }
 
 \usage{
