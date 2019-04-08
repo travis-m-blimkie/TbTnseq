@@ -3,12 +3,13 @@
 \alias{tbt_readFiles}
 
 \title{
-  Read Files from TnSeq Programs
+  Read files from TnSeq output
 }
 
 \description{
-Read the file produced by Tradis or Transit/Gumbel TnSeq pipelines and selects
-the gene name and call or count columns for subsequent use.
+Given a directory containing data files and list of conditions, read the files
+produced by Tradis or Transit/Gumbel TnSeq pipelines and select the gene name
+and call or count columns.
 }
 
 \usage{
@@ -29,7 +30,7 @@ tbt_readFiles(tool, conditions, reps, data_folder)
 Designed as the first step in a pipeline to determine essential genes from
 Tradis or Transit/Gumbel. After this step, count or call column (depending on
 the tool) should be renamed to be unique to each condition/replicate. This can
-be done using \code{tbt_rename()}.
+be done using \code{TbTnseq::tbt_rename()}.
 }
 
 \value{
@@ -47,7 +48,15 @@ be done using \code{tbt_rename()}.
 }
 
 \examples{
+conditions <- list("MHB_unt", "MHB_AZM", "RPMI_unt",
+  "RPMI_AZM", "serum_unt", "serum_AZM")
+reps <- c("rep1", "rep2", "rep3", "rep4")
+tradis_path <- "Data/Tradis"
 
+tradis_select_dfs <- tbt_readFiles(tool = "Tradis",
+                                     conditions = conditions,
+                                     reps = reps,
+                                     data_folder = tradis_path)
 }
 
 \keyword{functions}
