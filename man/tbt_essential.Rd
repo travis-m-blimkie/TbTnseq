@@ -44,15 +44,18 @@ call of "E". All other values are considered nonessential.
 }
 
 \references{
-  None.
+None.
 }
 
 \seealso{
-  \url{https://www.github.com/travis-m-blimkie/TbTnseq}
+\url{https://www.github.com/travis-m-blimkie/TbTnseq}
 }
 
 \examples{
-
+tbt_essential(tool = "Tradis",
+  input_df = tradis_results,
+  cond_name = "Treatment_1",
+  cutoff = 2)
 }
 
 \keyword{functions}
