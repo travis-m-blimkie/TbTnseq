@@ -26,7 +26,7 @@ tbt_essential <- function(tool, input_df, cond_name, cutoff) {
 
     # Code for Tradis
     output_df <- input_df %>%
-      mutate(., sum_counts_0 = rowSums(select_if(.tbl = ., .predicate = is.numeric) == 0)) %>%
+      mutate(., sum_counts_0 = rowSums(. == 0)) %>%
       mutate(., !!cond_name := case_when(sum_counts_0 >= cutoff ~ "ess", TRUE ~ "non"))
 
   }
