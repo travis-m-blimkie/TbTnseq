@@ -1,7 +1,7 @@
 
 # Determine essentiality function -----------------------------------------
 
-tbt_essential <- function(tool, input_df, cond_name, cutoff) {
+tbt_essential <- function(tool, input_df, cutoff) {
 
   # Required libraries
   require(tidyverse)
@@ -11,25 +11,27 @@ tbt_essential <- function(tool, input_df, cond_name, cutoff) {
     stop('Please enter either "Gumbel" or "Tradis" for tool.')
   }
 
-  # Deal with NSE
-  cond_name <- enquo(cond_name)
-
 
   if (tool == "Gumbel") {
 
     # Code for Gumbel
-    output_df <- input_df %>%
-      mutate(., sum_counts_E = rowSums(. == "E")) %>%
-      mutate(., !!cond_name := case_when(sum_counts_E >= cutoff ~ "ess", TRUE ~ "non"))
+    ess_df <- input_df %>%
+      mutate(sum_counts_E = rowSums(. == "E")) %>%
+      mutate(ess_stat = case_when(sum_counts_E >= cutoff ~ "ess", TRUE ~ "non"))
 
   } else if (tool == "Tradis") {
 
     # Code for Tradis
-    output_df <- input_df %>%
-      mutate(., sum_counts_0 = rowSums(. == 0)) %>%
-      mutate(., !!cond_name := case_when(sum_counts_0 >= cutoff ~ "ess", TRUE ~ "non"))
+    ess_df <- input_df %>%
+      mutate(sum_counts_0 = rowSums(. == 0)) %>%
+      mutate(ess_stat = case_when(sum_counts_0 >= cutoff ~ "ess", TRUE ~ "non"))
 
   }
+
+  # Filter out non-essential genes
+  output_df <- ess_df %>%
+    filter(ess_stat == "ess")
+
 
   return(output_df)
 
