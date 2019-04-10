@@ -12,7 +12,7 @@
 }
 
 \usage{
-tbt_essential(tool, input_df, cond_name, cutoff)
+tbt_essential(tool, input_df, cutoff)
 }
 
 \arguments{
@@ -21,9 +21,6 @@ tbt_essential(tool, input_df, cond_name, cutoff)
   \item{input_df}{   Data frame containing the call or count information for
   each gene. Expects standard column names produced by Tradis or Transit/
   Gumbel.}
-  \item{cond_name}{ Name of the condition being checked for essentiality.
-  Output data frame will have an additional column, named for the condition,
-  containing the essential/non-essential call.}
   \item{cutoff}{  Desired cutoff for calling a gene essential.}
 }
 
@@ -38,9 +35,8 @@ call of "E". All other values are considered nonessential.
 }
 
 \value{
-  \item{tbt_essential}{   A data frame containing an additional column, named
-  from the provided condition, containing either "ess" for essential, or "non"
-  for non-essential.}
+  \item{tbt_essential}{   A data frame containing an additional column
+  containing either "ess" for essential, or "non" for non-essential.}
 }
 
 \references{
@@ -54,7 +50,6 @@ None.
 \examples{
 tbt_essential(tool = "Tradis",
   input_df = tradis_results,
-  cond_name = "Treatment_1",
   cutoff = 2)
 }
 
