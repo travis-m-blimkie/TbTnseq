@@ -7,8 +7,8 @@
 }
 
 \description{
-  Call a gene as essential or non-essential based on calls or counts from
-  TnSeq programs Tradis or Transit/Gumbel.
+  Determine essential genes based on calls or counts from TnSeq programs Tradis
+  or Transit/Gumbel.
 }
 
 \usage{
@@ -17,10 +17,9 @@ tbt_essential(tool, input_df, cutoff)
 
 \arguments{
   \item{tool}{  Name of the tools used to produce raw calls or counts.
-  Currently supports either "Tradis"" or "Gumbel".}
+  Currently supports either "Tradis" or "Gumbel".}
   \item{input_df}{   Data frame containing the call or count information for
-  each gene. Expects standard column names produced by Tradis or Transit/
-  Gumbel.}
+  each gene. Expects standard columns produced by Tradis or Transit/Gumbel.}
   \item{cutoff}{  Desired cutoff for calling a gene essential.}
 }
 
@@ -35,8 +34,8 @@ call of "E". All other values are considered nonessential.
 }
 
 \value{
-  \item{tbt_essential}{   A data frame containing an additional column
-  containing either "ess" for essential, or "non" for non-essential.}
+  \item{tbt_essential}{   A data frame of essential genes, and containing an
+  additional column denoting essentiality with "ess".}
 }
 
 \references{
