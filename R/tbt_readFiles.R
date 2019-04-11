@@ -19,7 +19,7 @@ tbt_readFiles <- function(tool, conditions, reps, data_folder) {
 
   # Generate list of files to be used
   my_files <- conditions %>%
-    map(~list.files(data_folder, pattern = ., full.names = T, ignore.case = T) %>%
+    map(~list.files(data_folder, pattern = ., full.names = T, ignore.case = T, recursive = T) %>%
           set_names(., reps)) %>%
     set_names(., conditions)
 
