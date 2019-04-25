@@ -15,5 +15,4 @@ The only major dependency is `tidyverse`.
 The simplest way to intsall the package is through the `devtools::install_github()` function. One can simply copy and paste the code below into the RStudio console to install and load the package:
 
 `devtools::install_github("travis-m-blimkie/TbTnseq")`  
-
 `library(TbTnseq)`
