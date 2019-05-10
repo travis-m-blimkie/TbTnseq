@@ -17,13 +17,14 @@ tbt_readFiles(tool, conditions, reps, data_folder)
 }
 
 \arguments{
-  \item{tool}{  Specify tool that produced the results files, either "Tradis" or "Gumbel".}
+  \item{tool}{  Specify tool that produced the results files, either "Tradis" or
+        "Gumbel".}
   \item{conditions}{   Names of the conditions, which must match to file names
         being read.}
   \item{reps}{  Number of replicates, which should be the same as the number of files
         for a given condition.}
-  \item{data_folder}{ Folder containing all of the files for each condition
-        and all its replicates. Should NOT end with "/".}
+  \item{data_folder}{  Folder containing all of the files for each condition and
+        all its replicates. Should NOT end with "/".}
 }
 
 \details{
@@ -48,11 +49,15 @@ be done using \code{TbTnseq::tbt_rename()}.
 }
 
 \examples{
+# Set up requisite info
 conditions <- list("MHB_unt", "MHB_AZM", "RPMI_unt",
   "RPMI_AZM", "serum_unt", "serum_AZM")
+
 reps <- c("rep1", "rep2", "rep3", "rep4")
+
 tradis_path <- "Data/Tradis"
 
+# Run tbt_readFiles()
 tradis_select_dfs <- tbt_readFiles(tool = "Tradis",
                                      conditions = conditions,
                                      reps = reps,

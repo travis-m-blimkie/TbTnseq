@@ -46,7 +46,8 @@ containing the appropriate information for each replicate.
 }
 
 \examples{
-tbt_rename(tradis_results_list, "Treatment_1")
+tbt_rename(input_list = tradis_results_list,
+           cond_name = "Treatment_1")
 }
 
 \keyword{functions}
