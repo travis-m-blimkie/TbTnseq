@@ -4,7 +4,7 @@
 R package for running a TnSeq essentiality analysis pipeline. Designed for use with TnSeq results for Tradis and Transit (Gumbel). Designed to use raw files as produced by Tradis or Transit/Gumbel as input, and produce a list of essential genes. Allows the specification of stringency threshold in relation to the number of replicates (e.g. for Tradis, a gene is essential if it has 0 counts in at least 2 of 3 replicates).
 
 ### Dependencies
-The only major dependency is `tidyverse`. Installation is best accomplished with `devtools`.
+The only dependency is the `tidyverse` package.
 
 ### Workflow & Functions
 - **tbt_readFiles:** Read in files produced by Tradis or Transit/Gumbel and select appropriate columns, namely gene name and columns denoting essentiality (Read Counts for Tradis, Call for Transit/Gumbel)
