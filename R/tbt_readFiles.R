@@ -18,10 +18,26 @@ tbt_readFiles <- function(tool, conditions, reps, data_folder) {
 
 
   # Generate list of files to be used
-  my_files <- conditions %>%
-    map(~list.files(data_folder, pattern = ., full.names = T, ignore.case = T, recursive = T) %>%
-          set_names(., reps)) %>%
-    set_names(., conditions)
+  # Patterns may need to be changed depending on input file names
+  if (tool == "Tradis") {
+
+    my_files <- conditions %>%
+      map(
+        ~list.files(data_folder, pattern = paste0(., ".*csv.all.csv"), full.names = T, ignore.case = T, recursive = T) %>%
+          set_names(., reps)
+        ) %>%
+      set_names(., conditions)
+
+  } else if (tool == "Gumbel") {
+
+    my_files <- conditions %>%
+      map(
+        ~list.files(data_folder, pattern = paste0(., ".*locus_tags.tsv"), full.names = T, ignore.case = T, recursive = T) %>%
+          set_names(., reps)
+        ) %>%
+      set_names(., conditions)
+
+  }
 
 
   # Print info for conditions and files for the user
