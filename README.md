@@ -9,7 +9,7 @@ The only dependency is the `tidyverse` package.
 ### Workflow & Functions
 - **tbt_readFiles:** Read in files produced by Tradis or Transit/Gumbel and select appropriate columns, namely gene name and columns denoting essentiality (Read Counts for Tradis, Call for Transit/Gumbel)
 - **tbt_rename:** Renames count or call column to be unique for each replicate in a given condition/treatment (user-defined).
-- **tbt_essential:** Return a data frame of essential genes for Tradis Transit/Gumbel, with an additional column denoting essentiality.
+- **tbt_essential:** Return a data frame of essential genes for Tradis or Transit/Gumbel.
 
 ### Installation
 The simplest way to intsall the package is through the `devtools::install_github()` function. One can simply copy and paste the code below into the RStudio console to install and load the package:
