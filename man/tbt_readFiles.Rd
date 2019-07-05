@@ -49,19 +49,18 @@ be done using \code{TbTnseq::tbt_rename()}.
 }
 
 \examples{
-# Set up requisite info
-conditions <- list("MHB_unt", "MHB_AZM", "RPMI_unt",
-  "RPMI_AZM", "serum_unt", "serum_AZM")
+# Set up required info
+conditions <- list("MHB_unt", "MHB_AZM")
 
-reps <- c("rep1", "rep2", "rep3", "rep4")
+reps <- c("rep1", "rep2", "rep3")
 
 tradis_path <- "Data/Tradis"
 
 # Run tbt_readFiles()
 tradis_select_dfs <- tbt_readFiles(tool = "Tradis",
-                                     conditions = conditions,
-                                     reps = reps,
-                                     data_folder = tradis_path)
+                                   conditions = conditions,
+                                   reps = reps,
+                                   data_folder = tradis_path)
 }
 
 \keyword{functions}
